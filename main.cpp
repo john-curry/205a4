@@ -5,15 +5,18 @@
    
    B. Bird - 03/02/2016
 */
-
+#define SHARED_LIBRARY
+#define _USE_MATH_DEFINES // for PI
+#define MAIN_CPP
+#include <cmath>
 #include <string>
+#include <vector>
 #include <iostream>
 #include "lodepng.h"
 #include "png_canvas.h"
+#include "gauss.h"
 
 using namespace std;
-
-
 
 void process_image(PNG_Canvas_BW& image){
 	int width = image.get_width();
@@ -25,13 +28,12 @@ void process_image(PNG_Canvas_BW& image){
 	//Placeholder: invert the image
 	for (int x = 0; x < width; x++)
 		for (int y = 0; y < height; y++)
-			outputImage[x][y] = 255 - image[x][y];
+			outputImage[x][y] = gaussian(image[x][y]);
 			
 			
 	//Copy the result back into the provided image
 	image = outputImage;
 }
-
 
 
 int main(int argc, char** argv){
