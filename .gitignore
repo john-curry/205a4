@@ -1,0 +1,10 @@
+log
+*.o
+tags
+tag
+filter
+*.class
+*.so
+*.out
+*.exe
+
