@@ -7,7 +7,7 @@ ARGS=$(wildcard *.png)
 ARGOUT=$(ARGS:.png=out.png)
 FILES=$(wildcard *.cpp)
 OBJS=$(addprefix build/, $(FILES:.cpp=.o))
-HEADERS=$(wildcard *.h)
+HEADERS=$(wildcard $(INCLUDE)/*.h)
 
 all: $(OUT) tools build
 	cd tools && $(MAKE)

@@ -105,8 +105,10 @@ public:
 				set_pixel(x,y,other.get_pixel(x,y));
 	}
 	
-	int get_width(){ return width; }
-	int get_height(){ return height; }
+	//int get_width(){ return width; }
+	//int get_height(){ return height; }
+	const int get_width(){ return width; }
+	const int get_height(){ return height; }
 	
 private:
 	int width,height;

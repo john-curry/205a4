@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "match_histogram.h"
+
 double gaussian(double, double sigma = 40, double mu = 50);
 double gaussian(double, double, double);
 
